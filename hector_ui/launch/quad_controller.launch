@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="hector_ui" type="ui_hector_quad_improved.py" name="hector_ui" output="screen"/>
+</launch>

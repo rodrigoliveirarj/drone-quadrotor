@@ -1,0 +1,9 @@
+<node pkg="map_server" type="map_server" name="map_server" args="$(find quadrotor_navigation)/maps/map.yaml" />
+<node pkg="amcl" type="amcl" name="amcl">
+  <param name="use_map_topic" value="true"/>
+  <!-- Outros parametros -->
+</node>
+
+
+
+

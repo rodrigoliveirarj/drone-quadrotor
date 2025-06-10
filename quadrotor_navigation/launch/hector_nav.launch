@@ -1,0 +1,13 @@
+<launch>
+  <!-- Inicia o mapa estatico ou SLAM -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(find quadrotor_navigation)/maps/map.yaml" />
+
+  <!-- move_base -->
+  <include file="$(find quadrotor_navigation)/launch/move_base.launch" />
+
+  <!-- opcional: amcl (se estiver usando mapa estatico) -->
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+    <param name="use_map_topic" value="true" />
+    <param name="odom_frame_id" value="odom" />
+  </node>
+</launch>

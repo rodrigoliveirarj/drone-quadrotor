@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="quadrotor_navigation" type="ground_truth_to_tf.py" name="ground_truth_to_tf2" output="screen"/>
+</launch>
